@@ -568,7 +568,7 @@ client.on('message', async message => {
     var fromwhere = '';
     var fa2dh = '';
     var filter = m => m.author.id === message.author.id;
-    var subChannel = message.guild.channels.find(c => c.name === 'Applys');
+    var subChannel = message.guild.channels.find(c => c.name === 'applys');
    
     if(command == prefix + 'apply') {
         if(message.author.bot) return;
@@ -577,7 +577,7 @@ client.on('message', async message => {
         var modRole = message.guild.roles.find(r => r.name === 'Support / سبورت');
        
         if(message.guild.member(message.author).roles.has(modRole.id)) return message.channel.send(':x: | معك الرتبة');
-        if(!subChannel) return message.channel.send(':x: | يجب ان يتوفر روم اسمه `Applys`');
+        if(!subChannel) return message.channel.send(':x: | يجب ان يتوفر روم اسمه `applys`');
        
         message.channel.send(':timer: | **اسمك**').then(msgS => {
             message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] }).then(collected => {
