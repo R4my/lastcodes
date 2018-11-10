@@ -562,7 +562,7 @@ client.on("message", (message) => {
 
 client.on('message', async message => {
     var command = message.content.toLowerCase().split(" ")[0];
-    var prefix = '&';
+    var prefix = '$';
     var name = '';
     var age = '';
     var fromwhere = '';
